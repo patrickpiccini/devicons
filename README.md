@@ -15,22 +15,21 @@ Project
 │   README.md
 │   requirements.txt
 │
-├───infrastructure
-│       __init__.py
 ├───settings
 │       api.env
 └───src
     │   __init__.py
-    ├───api
+    ├───resources
     │       __init__.py
-    ├───common
-    │   │   __init__.py
-    │   ├───config
-    │   │       __init__.py
-    │   └───models
-    │           __init__.py
+    |       images.py
+    |
+    ├───tamplate
+    │       __init__.py
+    │       index.html
+    │
     ├───test
     │       __init__.py
+    |
     └───utils
             __init__.py
 ~~~
