@@ -1,0 +1,70 @@
+version: "3.7"
+networks:
+  network-service:
+    driver: bridge
+    name: internal-network
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management-alpine"
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    labels:
+      NAME: "rabbitmq1"
+    networks:
+      network-service:
+        ipv4_address: 10.5.0.10
+
+  postgres:
+    container_name: postgres_container
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: baseapplication
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/data/
+    networks:
+      network-service:
+        ipv4_address: 10.5.0.11
+    
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres
+    volumes:
+      - ./data/:/data/
+      - ./postgres-backup:/var/lib/postgresql/backups
+    networks:
+      network-service:
+        ipv4_address: 10.5.0.12
+
+  redis:
+    image: redis:alpine
+    container_name: redis-container
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      network-service:
+        ipv4_address: 10.5.0.9
