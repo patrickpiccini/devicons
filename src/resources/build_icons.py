@@ -2,10 +2,11 @@
 import json, math
 
 class BuildSVG(object):
-    def __init__(self, theme='', perline='') -> None:
+    def __init__(self, theme='', perline='', size=48) -> None:
         self.icon_list :list    = []
         self.theme     :str     = theme
         self.perline   :int     = int(perline)
+        self.size      :int     = int(size)
 
     def build_icons(self, icons) -> list:
         icon_list = [icons[i].lower() for i in range(len(icons))]
@@ -26,7 +27,7 @@ class BuildSVG(object):
         group_build = ''
         line        = 0
         colum       = 0
-        scale       = 0.1875
+        scale       = self.size / 256
         length          = min(self.perline * 300, len(self.icon_list) * 300) - 44
         height          = math.ceil(len(self.icon_list) / self.perline) * 300 - 44
         scaleWidth      = length * scale
