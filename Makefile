@@ -1,6 +1,7 @@
 #!make
-
-export PYTHON=python
+VENV=PY31
+PYTHON = $(VENV)/bin/python3.11
+PIP = $(VENV)/bin/pip
 
 default: run_api
 
