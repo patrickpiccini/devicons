@@ -26,7 +26,7 @@ class BuildSVG(object):
         group_build = ''
         line        = 0
         colum       = 0
-        scale       = 48
+        scale       = 0.1875
         length          = min(self.perline * 300, len(self.icon_list) * 300) - 44
         height          = math.ceil(len(self.icon_list) / self.perline) * 300 - 44
         scaleWidth      = length * scale
@@ -53,7 +53,7 @@ class BuildSVG(object):
             line +=1
         
         obj_svg = f'''
-         <svg width="${scaleWidth}" height="${scale}" viewBox="0 0 ${length} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <svg width="{scaleWidth}" height="{scaleHeight}" viewBox="0 0 {length} {height}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 
             {group_build}
 
