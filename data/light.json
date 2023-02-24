@@ -39,6 +39,7 @@
     "d3": "./icons/light/D3.svg",
     "dart": "./icons/light/Dart.svg",
     "deno": "./icons/light/DENO.svg",
+    "devicon": "./icons/light/devicon.svg",
     "devto": "./icons/light/DevTo.svg",
     "discord": "./icons/light/Discord.svg",
     "discordbots": "./icons/light/DiscordBots.svg",

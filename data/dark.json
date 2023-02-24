@@ -23,6 +23,7 @@
     "d3": "./icons/dark/D3.svg",
     "dart": "./icons/dark/Dart.svg",
     "deno": "./icons/dark/DENO.svg",
+    "devicon": "./icons/dark/devicon.svg",
     "devto": "./icons/dark/DevTo.svg",
     "dynamodb": "./icons/dark/DynamoDB.svg",
     "eclipse": "./icons/dark/Eclipse.svg",

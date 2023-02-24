@@ -1,5 +1,5 @@
 from flask_restful import Resource, reqparse
-from flask import render_template, make_response, Markup, Response
+from flask import  Response
 
 from src.resources.build_icons import BuildSVG
 
@@ -8,7 +8,7 @@ class Icon(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument('icon', type=str, location='args')
         parser.add_argument('theme', type=str, location='args', default='dark')
-        parser.add_argument('perline', type=str, location='args', default='20')
+        parser.add_argument('perline', type=str, location='args', default='30')
         parser.add_argument('size', type=str, location='args', default='48')
 
         args = parser.parse_args()
@@ -27,7 +27,7 @@ class Icon(Resource):
             return {'message': 'You need choice "dark" or "light" theme',
                     'status': 400}, 400
 
-        if not perline or perline <= 0 or perline > 20:
+        if not perline or perline <= 0 or perline > 30:
                return {'message': 'Icons per line must be a number between 1 and 20',
                     'status': 400}, 400
 
