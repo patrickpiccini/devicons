@@ -15,5 +15,14 @@ def build_json():
         with open(f"./data/{dir}.json", "w") as my_file:
             my_file.write(json_object)
 
+def load_select_options():
+    list=''
+    for file in os.listdir(f'./icons/light'):
+        list += file.replace('.svg','')+', '
+    with open(f"src/tamplate/options.txt", "w") as my_file:
+        my_file.write(list[:-1])
+
+
 if __name__ == '__main__':
-    build_json()
+    # build_json()
+    load_select_options()
