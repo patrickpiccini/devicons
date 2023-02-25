@@ -60,18 +60,20 @@ function gerarLink() {
     var perline = document.getElementById("perline").value;
     var size = document.getElementById("size").value;
     var theme = document.getElementById("theme").value;
+    var url =  "http://localhost:8080/icons?"
 
     if(icon_list != null && icon_list != []){
-        var link = "http://localhost:8080/icons?icon=" + icon_list.toString()
+        console.log(icon_list);
+        url += "icon="+icon_list.toString()
     }
     if(size){
-        link += `&size=`+size
+        url += `&size=`+size
     }
     if(theme){
-        link += `&theme=`+theme
+        url += `&theme=`+theme
     }
     if(perline){
-        link += `&perline=`+perline
+        url += `&perline=`+perline
     }
     $("#colum_div_1").empty()
     $("#colum_div_1").append(`<label class="label_text" for="tema">Preview:</label>
@@ -79,8 +81,8 @@ function gerarLink() {
     
     var linkGerado = document.getElementById("link-gerado");
     var preview = document.getElementById("preview")
-    linkGerado.innerHTML = link
-    preview.setAttribute('src', link)
+    linkGerado.innerHTML = url
+    preview.setAttribute('src', url)
 }
 
 
