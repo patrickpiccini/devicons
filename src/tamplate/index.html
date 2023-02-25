@@ -34,23 +34,33 @@
         
         <div class="div_top">
             <label class="label_text" for="icon">Select your abilitys</label>
-            <select id="select_icon" name="icon">
-                <option value="1">Opção 1</option>
-                <option value="2">Opção 2</option>
-                <option value="3">Opção 3</option>
+            <select id="select_icon" name="icon" onchange="attualizeLabels()">
+                <option value="opcao1">Opção 1</option>
+                <option value="opcao2">Opção 2</option>
+                <option value="opcao3">Opção 3</option>
+                <option value="opcao4">Opção 4</option>
+                <option value="opcao5">Opção 5</option>
+                <option value="opcao6">Opção 6</option>
+                <option value="opcao7">Opção 7</option>
+                <option value="opcao8">Opção 8</option>
+                <option value="opcao9">Opção 9</option>
+                <option value="opcao10">Opção 10</option>
             </select>
+            <div id="div_tags">
+                <!-- The tags will add here -->
+            </div>
         </div>
 
 		<div class="div_central">
-			<div class="item_div">
+			<div class="div_item">
 				<label class="label_text" for="numero1">Per Line</label>
 				<input class="numbers" id="perline" type="number" name="per line" min="0">
 			</div>
-			<div class="item_div" style="margin-inline: 15px;">
+			<div class="div_item" style="margin-inline: 15px;">
 				<label class="label_text" for="numero2">Size:</label>     
 				<input class="numbers"  id="size" type="number"  name="size" min="0">
 			</div>
-            <div class="item_div">
+            <div class="div_item">
                 <label class="label_text" for="numero2">Theme:</label>
                 <select class="theme" id="theme" name="Theme">
                     <option value="Dark">Dark</option>
@@ -60,11 +70,11 @@
         </div>
 
         <div class="div_bottom">
-            <button class="renerate_button" type="button" onclick="gerarLink()">Gerar Link</button>
+            <button class="renerate_button" type="button" onclick="gerarLink()">Generate Link</button>
             
-            <div class="item_div">
+            <div class="div_item">
 
-                <label class="label_text" for="tema">Selecione um tema:</label>
+                <label class="label_text" for="tema">Copy link:</label>
 
                 <div class="row_div_1">
                     <text id="link-gerado"></text>

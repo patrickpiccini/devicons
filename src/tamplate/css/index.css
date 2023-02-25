@@ -32,6 +32,17 @@ body{
     display: flex;
     margin-bottom: 50px;
 }
+
+.div_item{
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+	font-size: 1.5em;
+}
+#div_tags{
+    margin-bottom: 40px;
+
+}
 /* ---------------------------------- */
 
 
@@ -78,20 +89,20 @@ form {
     font-size: 17px;
     font-weight: bold;
 }
-
-.item_div{
-    flex-direction: column;
-    display: flex;
-    flex: 1;
-	font-size: 1.5em;
+#label_tag{
+    background-color: #ccc;
+    padding: 7px;
+    border-radius: 50px;
+    margin-right: 5px;
 }
+
 #select_icon{
     border-radius: 15px;
     padding: 10px;
     border: 1px solid #ccc;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 16px;
 
 }
