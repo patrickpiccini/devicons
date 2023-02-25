@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/script.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <link rel="icon" href="img/devicon.svg" sizes="any" type="image/svg+xml">
     <title>Dev Icon</title>
 </head>
 
-<body>
+<body onload="loadLabels()">
     <header>
         <div class="headerlinks">
             <a href="mailto:patrickpiccin@hotmail.com" style="padding-right: 5px;" title="Email">
@@ -35,16 +34,7 @@
         <div class="div_top">
             <label class="label_text" for="icon">Select your abilitys</label>
             <select id="select_icon" name="icon" onchange="attualizeLabels()">
-                <option value="opcao1">Opção 1</option>
-                <option value="opcao2">Opção 2</option>
-                <option value="opcao3">Opção 3</option>
-                <option value="opcao4">Opção 4</option>
-                <option value="opcao5">Opção 5</option>
-                <option value="opcao6">Opção 6</option>
-                <option value="opcao7">Opção 7</option>
-                <option value="opcao8">Opção 8</option>
-                <option value="opcao9">Opção 9</option>
-                <option value="opcao10">Opção 10</option>
+                <!-- The options will add here -->
             </select>
             <div id="div_tags">
                 <!-- The tags will add here -->
@@ -63,8 +53,8 @@
             <div class="div_item">
                 <label class="label_text" for="numero2">Theme:</label>
                 <select class="theme" id="theme" name="Theme">
-                    <option value="Dark">Dark</option>
-                    <option value="Light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
                 </select>
             </div>
         </div>
@@ -88,12 +78,11 @@
 
         <div class="informations">
             <label class="label_text" for="tema">Exemple:</label>
-            <img src="img/example.png" style="width: 100%;" alt="">
+            <img src="img/example.png" style="width: 100%; border-radius: 20px;" alt="">
         </div>
 
 	</form>
     <footer>
-
     </footer>
 </body>
 </html>

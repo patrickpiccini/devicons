@@ -1,13 +1,14 @@
 from flask import Flask
 from flask_restful import Api
 
-from src.utils.build_json import build_json
+from src.utils.build_json import build_json, load_select_options
 
 from src.resources.icons import Icon
 from src.resources.home import Home
 
 # Creation JSON files with svg names
 build_json()
+load_select_options()
 
 app = Flask(__name__, template_folder='src/tamplate')
 api = Api(app)
