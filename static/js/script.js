@@ -1,3 +1,4 @@
+var host = 'localhost'
 var icon_tags = new Object() // object with selected values
 var counter = 0 
 
@@ -57,7 +58,7 @@ function gerarLink() {
     var perline = document.getElementById("perline").value;
     var size = document.getElementById("size").value;
     var theme = document.getElementById("theme").value;
-    var url =  `Http://localhost:8080/icons?`
+    var url =  `Http://${host}:8080/icons?`
 
     if(icon_list != null && icon_list != []){
         console.log(icon_list);
