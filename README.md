@@ -5,31 +5,60 @@ This repository is a template for python projects
 ### Arquitetura do Projeto:
 
 ~~~
-Project
+dev-icon
+│   .env
 │   .gitignore
+│   app.py
 │   docker-compose.yml
 │   Dockerfile
 │   LICENSE
-│   main.py
 │   Makefile
 │   README.md
 │   requirements.txt
 │
-├───settings
-│       api.env
-└───src
-    │   __init__.py
-    ├───resources
-    │       __init__.py
-    |       images.py
-    |
-    ├───tamplate
-    │       __init__.py
-    │       index.html
+├───data
+│       dark.json
+│       light.json
+│
+├───icons
+│   ├───dark
+│   │       ...svg
+│   │
+│   └───light
+│           ...svg
+│
+├───src
+│   │   __init__.py
+│   │
+│   ├───resources
+│   │       build_icons.py
+│   │       home.py
+│   │       icons.py
+│   │       __init__.py
+│   │
+│   ├───tamplate
+│   │       icons_name.txt
+│   │       index.html
+│   │
+│   ├───test
+│   │       __init__.py
+│   │
+│   └───utils
+│           build_json.py
+│           __init__.py
+│   
+└───static
+    ├───css
+    │       index.css
     │
-    ├───test
-    │       __init__.py
-    |
-    └───utils
-            __init__.py
+    ├───img
+    │       devicon.svg
+    │       email.svg
+    │       exemple.png
+    │       git.svg
+    │       linkedin.svg
+    │       logo.svg
+    │
+    └───js
+            script.js
 ~~~

@@ -13,25 +13,28 @@ class Icon(Resource):
 
         args = parser.parse_args()
 
-        if not args.get('icon'):
-            return {'message': 'Please, inform the icon that you want',
-                    'status': 400}, 400
 
-        icons = args.get('icon').split(',')
+        icons = args.get('icon')
         theme = args.get('theme')
         perline = int(args.get('perline'))
         size = int(args.get('size'))
+        print("iconsssss:"+theme)
+        print(type(theme))
 
+
+        if not icons and icons == None and icons == '' :
+            return {'message': 'Please, inform the icon that you want',
+                    'status': 400}, 400
         
-        if theme and theme != 'dark' and theme != 'light':
+        if theme and theme != 'dark' and theme != 'light' or theme == '' or theme == None:
             return {'message': 'You need choice "dark" or "light" theme',
                     'status': 400}, 400
 
         if not perline or perline <= 0 or perline > 30:
-               return {'message': 'Icons per line must be a number between 1 and 20',
+               return {'message': 'Icons per line must be a number between 1 and 30',
                     'status': 400}, 400
 
-
+        icons = icons.split(',')
         BSVG = BuildSVG(theme, perline, size)
         BSVG.build_icons(icons)
         svg_object = BSVG.build_svg()
