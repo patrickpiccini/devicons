@@ -36,9 +36,6 @@ var texte = ["Ableton", "ActivityPub", "Actix", "Adonis",
     
 async function loadLabels() {
 
-
-
-
     texte.forEach((index) =>{
         var selector = document.getElementById("select_icon");
         var option = document.createElement("option");
