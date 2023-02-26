@@ -39,6 +39,3 @@ class Icon(Resource):
 
         # return make_response(render_template('index.xml'))
         return Response(svg_object, mimetype='image/svg+xml')
-
-    def post(self):
-        pass
