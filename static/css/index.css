@@ -41,6 +41,8 @@ body{
 }
 #div_tags{
     margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 /* ---------------------------------- */
@@ -94,6 +96,7 @@ form {
     padding: 7px;
     border-radius: 50px;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 #select_icon{
@@ -177,9 +180,9 @@ form {
     flex-direction: column;
     display: flex;
 }
-#preview{
-    width: 500px;
-}
+/* #preview{
+    width: 256px;
+} */
 
 footer{
     padding: 50px;

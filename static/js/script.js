@@ -73,9 +73,10 @@ function gerarLink() {
     if(perline){
         url += `&perline=`+perline
     }
+
     $("#colum_div_1").empty()
     $("#colum_div_1").append(`<label class="label_text" for="tema">Preview:</label>
-    <img id="preview" src="" alt="">`)
+    <img id="preview" src="" style=width:${icon_list.length*55.962}px alt="">`)
     
     var linkGerado = document.getElementById("link-gerado");
     var preview = document.getElementById("preview")
@@ -83,7 +84,7 @@ function gerarLink() {
     preview.setAttribute('src', url)
 }
 
-
+""
 function copy_textLink() {
     var text_link = document.getElementById("link-gerado").innerHTML;
     
