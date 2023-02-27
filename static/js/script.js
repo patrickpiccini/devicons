@@ -74,9 +74,15 @@ function gerarLink() {
         url += `&perline=`+perline
     }
 
+    if (perline >= 1){
+        width_icon = icon_list.length*55.962 / icon_list.length * perline
+    } else {
+        width_icon = icon_list.length*55.962
+    }
+
     $("#colum_div_1").empty()
     $("#colum_div_1").append(`<label class="label_text" for="tema">Preview:</label>
-    <img id="preview" src="" style=width:${icon_list.length*55.962}px alt="">`)
+    <img id="preview" src="" style=width:${width_icon}px alt="">`)
     
     var linkGerado = document.getElementById("link-gerado");
     var preview = document.getElementById("preview")
