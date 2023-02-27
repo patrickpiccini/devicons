@@ -23,8 +23,8 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        sudo atp update -y
-        sudo apt install python3-pip
+        sudo apt update -y
+        sudo apt install python3-pip -y
         python -m pip install --upgrade pip
         cd /home/ubuntu/_work/dev-icons/dev-icons
         sudo pip install -r requirements.txt
