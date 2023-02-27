@@ -58,7 +58,7 @@ function gerarLink() {
     var perline = document.getElementById("perline").value;
     var size = document.getElementById("size").value;
     var theme = document.getElementById("theme").value;
-    var url =  `http://${host}:8080/icons?`
+    var url =  `http://${host}:80/icons?`
 
     if(icon_list != null && icon_list != []){
         console.log(icon_list);
