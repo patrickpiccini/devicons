@@ -1,4 +1,4 @@
-subhere
+var host = 'localhost'
 var icon_tags = new Object() // object with selected values
 var counter = 0 
 
