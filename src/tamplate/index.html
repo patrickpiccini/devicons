@@ -27,11 +27,11 @@
     <form style=>
         <div class="div_icon">
             <img src = "{{ url_for('static', filename='img/logo.svg') }}" style="display: flex;" alt="Dev Icon"/>
-            <h2 class="sbtitle">Your most powerful skills on GitHub</h2><br>
-	    <h1>TESTEEEEEEEE</h1>
-            <hr style="color: #CDCDCD; margin: 30px; width: 90%;">
+            <h2 class="sbtitle">Your most powerful skills on GitHub</h2>
+            <hr style="color: #CDCDCD; margin: 20px; width: 90%;">
         </div>
         
+        <div class="div_top">
         <div class="div_top">
             <label class="label_text" for="icon">Select your skills</label>
             <select id="select_icon" name="icon" onchange="attualizeLabels()">
@@ -61,7 +61,7 @@
         </div>
 
         <div class="div_bottom">
-            <button class="renerate_button" type="button" onclick="gerarLink()">Generate Link</button>
+            <button class="generate_button" type="button" onclick="gerarLink()">Generate Link</button>
             
             <div class="div_item">
 

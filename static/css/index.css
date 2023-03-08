@@ -25,7 +25,7 @@ body{
 .div_central{
     flex-direction: row;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .div_bottom{
     flex-direction: column;
@@ -83,7 +83,6 @@ form {
 
 .sbtitle{
     text-align: center;
-    margin-bottom: 20px;
 
 }
 .label_text {
@@ -129,7 +128,7 @@ form {
 
 
 }
-.renerate_button {
+.generate_button {
     background-color: #484848;
     color: #ffffff;
     padding: 10px 20px;
@@ -137,7 +136,7 @@ form {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
 }
 #link-gerado {
