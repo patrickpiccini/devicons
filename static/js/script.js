@@ -1,4 +1,5 @@
 var host = 'localhost'
+var port = 80
 var icon_tags = new Object() // object with selected values
 var counter = 0 
 
@@ -49,7 +50,7 @@ async function loadLabels() {
 }
 
 function gerarLink() {
-    var icon_list = []
+    var icon_list = [] 
     let object_index = Object.keys(icon_tags)
     object_index.forEach((index) => {
         icon_list.push(icon_tags[index]["value"])
@@ -58,7 +59,7 @@ function gerarLink() {
     var perline = document.getElementById("perline").value;
     var size = document.getElementById("size").value;
     var theme = document.getElementById("theme").value;
-    var url =  `http://${host}:80/icons?`
+    var url =  `http://${host}:${port}/icons?`
 
     if(icon_list != null && icon_list != []){
         console.log(icon_list);
