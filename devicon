@@ -9,7 +9,7 @@ server {
 
     location /static/ {
         autoindex on;
-        alias /home/ubuntu/app/dev-icons/static/;
+        alias /home/ubuntu/app/devicons/static/;
     }
 
 }
