@@ -9,6 +9,8 @@ dev-icon
 │   .env
 │   .gitignore
 │   app.py
+│   devicon
+│   devicon.service
 │   docker-compose.yml
 │   Dockerfile
 │   LICENSE
@@ -48,17 +50,12 @@ dev-icon
 │           __init__.py
 │   
 └───static
-    ├───css
-    │       index.css
-    │
-    ├───img
-    │       devicon.svg
-    │       email.svg
-    │       exemple.png
-    │       git.svg
-    │       linkedin.svg
-    │       logo.svg
-    │
-    └───js
+            index.css
+            devicon.svg
+            email.svg
+            exemple.png
+            git.svg
+            linkedin.svg
+            logo.svg
             script.js
 ~~~
