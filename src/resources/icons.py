@@ -18,8 +18,6 @@ class Icon(Resource):
         theme = args.get('theme')
         perline = int(args.get('perline'))
         size = int(args.get('size'))
-        print("iconsssss:"+theme)
-        print(type(theme))
 
 
         if not icons and icons == None and icons == '' :
