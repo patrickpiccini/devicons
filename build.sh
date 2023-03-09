@@ -16,9 +16,9 @@ python3 -m venv venv
 source venv/bin/activate
 
 # cloning the repository0
-git clone https://github.com/patrickpiccini/dev-icons.git
+git clone https://github.com/patrickpiccini/devicons.git
 
-cd dev-icons/
+cd devicons/
 pip install -r requirements.txt
 
 deactivate
@@ -32,6 +32,10 @@ sudo systemctl daemon-reload
 sudo systemctl start devicon
 
 # moving the devicon to config the proxy from nginx
+
+sudo rm -rf /etc/nginx/sites-available/default
+sudo rm -rf /etc/nginx/sites-enabled/default
+
 sudo mv devicon /etc/nginx/sites-available
 sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled
 sudo systemctl start nginx
