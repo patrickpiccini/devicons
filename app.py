@@ -18,7 +18,7 @@ PORT = os.getenv("PORT")
 build_json()
 load_select_options()
 
-app = Flask(__name__, template_folder='src/tamplate')
+app = Flask(__name__, template_folder='tamplate')
 api = Api(app)
 
 api.add_resource(Icon, '/icons', endpoint='icons')
