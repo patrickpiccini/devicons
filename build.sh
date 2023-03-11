@@ -1,8 +1,8 @@
 #! /bin/bash
-sudo apt update -y
-sudo apt install nginx 
-sudo apt install python3-pip -y
-sudo apt install python3-venv -y
+sudo apt -y update 
+sudo apt -y install nginx
+sudo apt -y install python3-pip
+sudo apt -y install python3-venv
 
 # setting the git config
 sudo git config --global user.name "HML_Server"
@@ -32,12 +32,12 @@ sudo systemctl daemon-reload
 sudo systemctl start devicon
 
 # moving the devicon to config the proxy from nginx
-
+sudo systemctl stop nginx
 sudo rm -rf /etc/nginx/sites-available/default
 sudo rm -rf /etc/nginx/sites-enabled/default
 
 sudo mv devicon /etc/nginx/sites-available
-sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/devicon
+sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
 sudo systemctl enable nginx
 sudo systemctl start nginx
 sudo systemctl restart nginx
