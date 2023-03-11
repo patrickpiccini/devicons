@@ -1,12 +1,12 @@
 #! /bin/bash
-sudo apt-get update -y
-sudo apt install nginx -y
+sudo apt update -y
+sudo apt install nginx 
 sudo apt install python3-pip -y
 sudo apt install python3-venv -y
 
 # setting the git config
-git config --global user.name "HML_Server"
-git config --global user.email patrickbpiccini@hotmail.com
+sudo git config --global user.name "HML_Server"
+sudo git config --global user.email patrickbpiccini@hotmail.com
 
 # creating the virtual enviroment to aplication
 cd ~
@@ -37,9 +37,10 @@ sudo rm -rf /etc/nginx/sites-available/default
 sudo rm -rf /etc/nginx/sites-enabled/default
 
 sudo mv devicon /etc/nginx/sites-available
-sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled
-sudo systemctl start nginx
+sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/devicon
 sudo systemctl enable nginx
+sudo systemctl start nginx
+sudo systemctl restart nginx
 
 
 ## AINDA FALTA O STATICS FUNCIONAR!!!!!!!!!!!!!!!!
