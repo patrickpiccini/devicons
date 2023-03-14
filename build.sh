@@ -3,6 +3,8 @@ sudo apt update
 sudo apt install nginx -y
 sudo apt install python3-pip -y
 sudo apt install python3-venv  -y
+alias python=python3 
+alias pip=pip3 
 
 # setting the git config
 sudo git config --global user.name "HML_Server"
@@ -19,12 +21,12 @@ source venv/bin/activate
 sudo git clone https://github.com/patrickpiccini/devicons.git
 
 cd devicons/
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 
 deactivate
 
 #to test Gunicorn
-# gunicorn --bind 0.0.0.0:8000 app:app
+# gunicorn --bind 127.0.0.1:5000 -w 2 app:app
 
 # moving the devicon.service
 sudo mv devicon.service /etc/systemd/system/
