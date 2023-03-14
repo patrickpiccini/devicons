@@ -3,13 +3,6 @@ server {
     server_name 0.0.0.0;
 
     location / {
-        include proxy_params;
         proxy_pass http://127.0.0.1:8000;
-    }
-
-    location ^~ /static/ {
-        include  /etc/nginx/mime.types;
-        autoindex on;
-        root /home/ubuntu/app/devicons/;
     }
 }
