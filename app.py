@@ -13,6 +13,7 @@ load_dotenv(dotenv_path='.env')
 
 HOST = os.getenv("HOST")
 PORT = os.getenv("PORT")
+DEBUG = os.getenv("DEBUG")
 
 # Creation JSON files with svg names
 build_json()
@@ -25,4 +26,4 @@ api.add_resource(Icon, '/icons', endpoint='icons')
 api.add_resource(Home, '/', endpoint='/')
 
 if __name__ == '__main__':
-    app.run(host=HOST, port=PORT, debug=True, )
+    app.run(host=HOST, port=PORT, debug=DEBUG)

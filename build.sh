@@ -1,8 +1,8 @@
 #! /bin/bash
-sudo apt -y update 
-sudo apt -y install nginx
-sudo apt -y install python3-pip
-sudo apt -y install python3-venv
+sudo apt update
+sudo apt install nginx -y
+sudo apt install python3-pip -y
+sudo apt install python3-venv  -y
 
 # setting the git config
 sudo git config --global user.name "HML_Server"
@@ -16,10 +16,10 @@ python3 -m venv venv
 source venv/bin/activate
 
 # cloning the repository0
-git clone https://github.com/patrickpiccini/devicons.git
+sudo git clone https://github.com/patrickpiccini/devicons.git
 
 cd devicons/
-pip install -r requirements.txt
+sudo pip install -r requirements.txt
 
 deactivate
 
@@ -40,6 +40,7 @@ sudo mv devicon /etc/nginx/sites-available
 sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
 sudo systemctl enable nginx
 sudo systemctl start nginx
+
 sudo systemctl restart nginx
 
 
