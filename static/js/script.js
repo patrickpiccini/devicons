@@ -1,5 +1,5 @@
 var host = 'localhost'
-var port = 80
+var port = 8000
 var icon_tags = new Object() // object with selected values
 var counter = 0 
 

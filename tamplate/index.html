@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ url_for('static', filename='devicon.svg') }}" sizes="any" type="image/svg+xml">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
     <title>Dev Icon</title>
 </head>
 
@@ -16,17 +16,17 @@
     <header>
         <div class="headerlinks">
             <a href="mailto:patrickpiccin@hotmail.com" style="padding-right: 5px;" title="Email">
-                <img src="{{ url_for('static', filename='email.svg') }}" alt="email"></a>
+                <img src="{{ url_for('static', filename='img/email.svg') }}" alt="email"></a>
             <a href="https://github.com/PatrickPiccini" style="padding-right: 5px;" title="Github">
-                <img src="{{ url_for('static', filename='git.svg') }}" alt="github"></a>
+                <img src="{{ url_for('static', filename='img/git.svg') }}" alt="github"></a>
             <a href="https://www.linkedin.com/in/patrick-berlatto-piccini-8414a91a7/" style="padding-right: 5px;" title="Linkedin">
-                <img src="{{ url_for('static', filename='linkedin.svg') }}" alt="linkedin"></a>
+                <img src="{{ url_for('static', filename='img/linkedin.svg') }}" alt="linkedin"></a>
         </div>
 
     </header>
     <form style=>
         <div class="div_icon">
-            <img src = "{{ url_for('static', filename='logo.svg') }}" style="display: flex;" alt="Dev Icon"/>
+            <img src = "{{ url_for('static', filename='img/logo.svg') }}" style="display: flex;" alt="Dev Icon"/>
             <h2 class="sbtitle">Your most powerful skills on GitHub</h2>
             <hr style="color: #CDCDCD; margin: 20px; width: 90%;">
         </div>
@@ -79,7 +79,7 @@
 
         <div class="informations">
             <label class="label_text" for="tema">Exemple:</label>
-            <img src="{{ url_for('static', filename='exemple.png') }}" style="width: 100%; border-radius: 20px;" alt="">
+            <img src="{{ url_for('static', filename='img/exemple.png') }}" style="width: 100%; border-radius: 20px;" alt="">
         </div>
 
 	</form>
