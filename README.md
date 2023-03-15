@@ -50,12 +50,15 @@ dev-icon
 │           __init__.py
 │   
 └───static
-            index.css
-            devicon.svg
-            email.svg
-            exemple.png
-            git.svg
-            linkedin.svg
-            logo.svg
+    ├───css
+    │        index.css
+    ├───img        
+    │        devicon.svg
+    │        email.svg
+    │        exemple.png
+    │        git.svg
+    │        linkedin.svg
+    │        logo.svg
+    └───js
             script.js
 ~~~
