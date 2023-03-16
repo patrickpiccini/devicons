@@ -17,6 +17,8 @@ cd app/
 
 # cloning the repository
 git clone https://github.com/patrickpiccini/devicons.git
+# git clone -b hml https://github.com/patrickpiccini/devicons.git
+
 
 # running venv
 python -m venv venv
