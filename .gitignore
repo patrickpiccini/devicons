@@ -3,9 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Ignore logs
-
-
 # C extensions
 *.so
 
