@@ -31,7 +31,7 @@ pip install -r requirements.txt
 deactivate
 
 # moving the devicon.service
-sudo mv devicon.service /etc/systemd/system/
+sudo mv conf/devicon.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl start devicon
 
@@ -40,7 +40,7 @@ sudo systemctl stop nginx
 sudo rm -rf /etc/nginx/sites-available/default
 sudo rm -rf /etc/nginx/sites-enabled/default
 
-sudo mv devicon /etc/nginx/sites-available
+sudo mv conf/devicon /etc/nginx/sites-available
 sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
 sudo systemctl enable nginx
 sudo systemctl start nginx

@@ -11,6 +11,3 @@ def load_file_log() -> object:
     else:
         today = datetime.now()
         shutil.copyfile("./logs/devicon.log", f"./logs/{today.strftime('%d%m%Y-%H%M%p')}.log")
-        
-
-
