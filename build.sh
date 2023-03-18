@@ -77,6 +77,9 @@ sudo systemctl start nginx
 # sudo systemctl status nginx
 # sudo systemctl stop nginx
 
+
+sudo systemctl stop devicon
+sudo systemctl stop nginx
 sudo rm -rf /etc/nginx/sites-available/devicon
 sudo rm -rf /etc/nginx/sites-enabled/devicon
 sudo rm -rf /etc/systemd/system/devicon.service
