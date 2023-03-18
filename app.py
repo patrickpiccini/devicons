@@ -16,7 +16,7 @@ load_dotenv(dotenv_path='.env')
 # Criation requirements files from logging
 load_file_log()
 
-logging.basicConfig(filename='../devicons/logs/devicon.log', filemode='a',
+logging.basicConfig(filename='./logs/devicon.log', filemode='a',
     format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
 
 HOST = os.getenv("HOST")

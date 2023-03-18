@@ -80,3 +80,8 @@ sudo systemctl start nginx
 sudo rm -rf /etc/nginx/sites-available/devicon
 sudo rm -rf /etc/nginx/sites-enabled/devicon
 sudo rm -rf /etc/systemd/system/devicon.service
+
+sudo tail -f /var/log/nginx/devicon.access.log
+sudo tail -f /var/log/nginx/access.log
+sudo tail -f /var/log/nginx/devicon.error.log
+sudo tail -f /var/log/nginx/error.log
