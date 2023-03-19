@@ -30,7 +30,9 @@ api.add_resource(Icon, '/icons', endpoint='icons')
 api.add_resource(Home, '/', endpoint='/')
 
 if __name__ == '__main__':
+    app.run(host=HOST, port=PORT, debug=DEBUG)
+
+if __name__ != '__main__':
     gunicorn_logger = logging.getLogger('gunicorn.error')
     app.logger.handlers = gunicorn_logger.handlers
     app.logger.setLevel(gunicorn_logger.level)
-    app.run(host=HOST, port=PORT, debug=DEBUG)
