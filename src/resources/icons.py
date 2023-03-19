@@ -23,7 +23,8 @@ class Icon(Resource):
             size = int(args.get('size'))
 
 
-            if not icons and icons == None and icons == '' :
+            if not icons or icons == None or icons == '' :
+                print('icone: '+icons)
                 logging.error('message: Please, inform the icon that you want - status: 400')
                 return {'message': 'Please, inform the icon that you want',
                         'status': 400}, 400

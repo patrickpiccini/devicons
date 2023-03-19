@@ -12,8 +12,8 @@ from src.resources.home import Home
 from dotenv import load_dotenv
 load_dotenv(dotenv_path='.env')
 
-# Criation requirements files from logging
-
+# Criation requirements for logging
+logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
 
 HOST = os.getenv("HOST")
 PORT = os.getenv("PORT")
