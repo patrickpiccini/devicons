@@ -9,14 +9,14 @@ dev-icon
 │   .env
 │   .gitignore
 │   app.py
-│   devicon
-│   devicon.service
-│   docker-compose.yml
-│   Dockerfile
 │   LICENSE
-│   Makefile
 │   README.md
 │   requirements.txt
+│
+├───conf
+│       devicon
+│       devicon.service
+│       gunicorn.conf.py
 │
 ├───data
 │       dark.json
@@ -28,6 +28,8 @@ dev-icon
 │   │
 │   └───light
 │           ...svg
+├───logs
+│        log.log
 │
 ├───src
 │   │   __init__.py
