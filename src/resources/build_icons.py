@@ -22,7 +22,7 @@ class BuildSVG(object):
             except:
                 pass
 
-    def build_svg(self) ->object:
+    def build_svg(self) -> object:
 
         group_build = ''
         line        = 0
@@ -33,15 +33,11 @@ class BuildSVG(object):
         scaleWidth      = length * scale
         scaleHeight     = height * scale
 
-        print(length, height, scaleWidth, scaleHeight)
-
         for svg in self.icon_list:
 
             if line == self.perline:
                 line = 0
                 colum += 1
-            print(line, colum)
-            
 
             with open(svg, "r") as my_file:
                 svg_file = my_file.read()

@@ -17,6 +17,8 @@ cd app/
 
 # cloning the repository
 git clone https://github.com/patrickpiccini/devicons.git
+# git clone -b hml https://github.com/patrickpiccini/devicons.git
+
 
 # running venv
 python -m venv venv
@@ -29,7 +31,7 @@ pip install -r requirements.txt
 deactivate
 
 # moving the devicon.service
-sudo mv devicon.service /etc/systemd/system/
+sudo mv conf/devicon.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl start devicon
 
@@ -38,7 +40,7 @@ sudo systemctl stop nginx
 sudo rm -rf /etc/nginx/sites-available/default
 sudo rm -rf /etc/nginx/sites-enabled/default
 
-sudo mv devicon /etc/nginx/sites-available
+sudo mv conf/devicon /etc/nginx/sites-available
 sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
 sudo systemctl enable nginx
 sudo systemctl start nginx
@@ -75,6 +77,12 @@ sudo systemctl start nginx
 # sudo systemctl status nginx
 # sudo systemctl stop nginx
 
+
+sudo systemctl stop devicon
+sudo systemctl stop nginx
 sudo rm -rf /etc/nginx/sites-available/devicon
 sudo rm -rf /etc/nginx/sites-enabled/devicon
 sudo rm -rf /etc/systemd/system/devicon.service
+
+sudo tail -f /home/ubuntu/app/devicons/logs/devicon.error.log
+sudo tail -f /home/ubuntu/app/devicons/logs/devicon.access.log

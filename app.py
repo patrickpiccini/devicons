@@ -1,4 +1,5 @@
 import os
+import logging
 
 from flask import Flask
 from flask_restful import Api
@@ -10,6 +11,9 @@ from src.resources.home import Home
 
 from dotenv import load_dotenv
 load_dotenv(dotenv_path='.env')
+
+# Criation requirements for logging
+logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
 
 HOST = os.getenv("HOST")
 PORT = os.getenv("PORT")
@@ -27,3 +31,8 @@ api.add_resource(Home, '/', endpoint='/')
 
 if __name__ == '__main__':
     app.run(host=HOST, port=PORT, debug=DEBUG)
+
+if __name__ != '__main__':
+    gunicorn_logger = logging.getLogger('gunicorn.error')
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(gunicorn_logger.level)

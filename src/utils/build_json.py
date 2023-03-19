@@ -1,6 +1,6 @@
 import os, json
 
-def build_json():
+def build_json() -> object:
     for dir in os.listdir('./icons'):
 
         dict_icons ={}
@@ -15,7 +15,7 @@ def build_json():
         with open(f"./data/{dir}.json", "w") as my_file:
             my_file.write(json_object)
 
-def load_select_options():
+def load_select_options() -> object:
     list=''
     for file in os.listdir(f'./icons/light'):
         list += file.replace('.svg','')+', '
