@@ -1,14 +1,10 @@
 #! /bin/bash
-sudo apt update
+sudo apt update -y
 sudo apt install nginx -y
 sudo apt install python3-pip -y
 sudo apt install python3-venv  -y
 alias python=python3 
 alias pip=pip3 
-
-# setting the git config
-git config --global user.name "HML_Server"
-git config --global user.email patrickbpiccini@hotmail.com
 
 # creating the app file
 cd ~
