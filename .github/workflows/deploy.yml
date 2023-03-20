@@ -27,7 +27,7 @@ jobs:
         python -m venv venv
         source venv/bin/activate
 
-        cd /home/ubuntu/app/actions-runner/_work/devicons/devicons/
+        cd /home/ubuntu/app/actions-runner/_work/devicons/devicons
 
 
     - name: Install dependencies
