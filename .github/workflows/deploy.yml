@@ -22,30 +22,16 @@ jobs:
     - uses: actions/checkout@v3
     - name: Cerating Enviroment
       run: |
-        cd /home/ubuntu/app/
+        /usr/bin/cd /home/ubuntu/app/
 
         python -m venv venv
-        source venv/bin/activate
+        /usr/bin/source venv/bin/activate
 
-        cd /home/ubuntu/app/actions-runner/_work/devicons/devicons/
+        /usr/bin/cd /home/ubuntu/app/actions-runner/_work/devicons/devicons/
 
 
     - name: Install dependencies
       run: |
         pip install -r requirements.txt  
     
-
-    - name: Configuring WebServer of DevIcon
-      run: |
-        sudo mv conf/devicon.service /etc/systemd/system/
-        sudo systemctl daemon-reload
-        sudo systemctl start devicon
-
-        sudo systemctl stop nginx
-        sudo rm -rf /etc/nginx/sites-available/default
-        sudo rm -rf /etc/nginx/sites-enabled/default
-
-        sudo mv conf/devicon /etc/nginx/sites-available
-        sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
-        sudo systemctl restart nginx
             
