@@ -34,23 +34,23 @@ jobs:
     - name: ❌ Remove all config files
       run: |
         sudo systemctl stop nginx
-        if [ -f /etc/nginx/sites-available/default ]; then
+        if [ -e /etc/nginx/sites-available/default ]; then
           sudo rm -rf /etc/nginx/sites-available/default
         if
 
-        if [ -f /etc/nginx/sites-enabled/default ]; then
+        if [ -e /etc/nginx/sites-enabled/default ]; then
           sudo rm -rf /etc/nginx/sites-enabled/default
         if
 
-        if [ -f /etc/systemd/system/devicon.service ]; then
+        if [ -e /etc/systemd/system/devicon.service ]; then
           sudo rm -rf /etc/systemd/system/devicon.service 
         if
 
-        if [ -f /etc/nginx/sites-available/devicon ]; then
+        if [ -e /etc/nginx/sites-available/devicon ]; then
           sudo rm -rf /etc/nginx/sites-available/devicon
         if
 
-        if [ -f /etc/nginx/sites-enabled/devicon ]; then
+        if [ -e /etc/nginx/sites-enabled/devicon ]; then
           sudo rm /etc/nginx/sites-enabled/devicon
         if
       
