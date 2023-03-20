@@ -82,3 +82,14 @@ sudo rm -rf /etc/systemd/system/devicon.service
 
 sudo tail -f /home/ubuntu/app/devicons/logs/devicon.error.log
 sudo tail -f /home/ubuntu/app/devicons/logs/devicon.access.log
+
+
+        if [ -f /etc/nginx/sites-available/default ]; then sudo rm -rf /etc/nginx/sites-available/default if
+
+        if [ -f /etc/nginx/sites-enabled/default ]; then sudo rm -rf /etc/nginx/sites-enabled/default if
+
+        if [ -f /etc/systemd/system/devicon.service ]; then sudo rm -rf /etc/systemd/system/devicon.service if
+
+        if [ -f /etc/nginx/sites-available/devicon ]; then sudo rm -rf /etc/nginx/sites-available/devicon if
+
+        if [ -f /etc/nginx/sites-enabled/devicon ]; then sudo rm /etc/nginx/sites-enabled/devicon if
