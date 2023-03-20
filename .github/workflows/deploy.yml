@@ -22,17 +22,16 @@ jobs:
     - uses: actions/checkout@v3
     - name: Cerating Enviroment
       run: |
-        cd ~
-        cd app/
-        git pull origin hml
+        cd /home/ubuntu/app/
+
         python -m venv venv
         source venv/bin/activate
-        cd devicons/
+
+        cd /home/ubuntu/app/actions-runner/_work/devicons/devicons/
 
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
         pip install -r requirements.txt  
     
 
