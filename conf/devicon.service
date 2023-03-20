@@ -8,7 +8,7 @@ Group=www-data
 WorkingDirector/home/ubuntu/actions-runner/_work/devicons/devicons
 Environment="PATH=/home/ubuntu/app/venv/bin"
 ###ExecStart=/home/ubuntu/app/venv/bin/gunicorn --config /home/ubuntu/app/devicons/conf/gunicorn.conf.py app:app
-###ExecStart=/home/ubuntu/app/venv/bin/gunicorn -b localhost:8000 --access-logfile /home/ubuntu/app/devicons/logs/devicon.access.log  --error-logfile /home/ubuntu/app/devicons/logs/devicon.error.log --capture-output --log-level debug app:app
+ExecStart=/home/ubuntu/app/venv/bin/gunicorn -b localhost:8000 --access-logfile /home/ubuntu/app/devicons/logs/devicon.access.log  --error-logfile /home/ubuntu/app/devicons/logs/devicon.error.log --capture-output --log-level debug app:app
 
 Restart=always
 
