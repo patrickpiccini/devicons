@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: 🔧 Start Build
+    name: ▶️ Start Build
     runs-on: self-hosted
 
     steps:
@@ -20,7 +20,7 @@ jobs:
         python-version: "3.10"
 
     - uses: actions/checkout@v3
-    - name: Cerating Enviroment
+    - name: 🔧 Cerating Enviroment and install dependencies
       run: |
         cd /home/ubuntu/app/
 
@@ -32,8 +32,22 @@ jobs:
         pip install -r requirements.txt  
 
 
-    - name: Install dependencies
+    - name: 🐣Run DevIcon
       run: |
-        pip install -r requirements.txt  
+        sudo mv /home/ubuntu/actions-runner/_work/devicons/devicons/conf/devicon.service /etc/systemd/system/
+        sudo systemctl daemon-reload
+        sudo systemctl start devicon
+
+    - name: 🆖 Run Nginx
+      run: |
+        sudo systemctl stop nginx
+        sudo rm -rf /etc/nginx/sites-available/default
+        sudo rm -rf /etc/nginx/sites-enabled/default
+
+        sudo mv /home/ubuntu/actions-runner/_work/devicons/devicons/conf/devicon /etc/nginx/sites-available
+        sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
+        sudo systemctl enable nginx
+        sudo systemctl start nginx
+
     
             
