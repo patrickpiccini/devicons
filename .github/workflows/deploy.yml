@@ -4,8 +4,8 @@
 name: 🚀Deploy DevIcon in EC2 hml
 
 on:
-  push:
-    branches: [ "main" ]
+  # push:
+  #   branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -47,6 +47,7 @@ jobs:
         sudo mv /home/ubuntu/actions-runner/_work/devicons/devicons/conf/devicon.service /etc/systemd/system/
         sudo systemctl daemon-reload
         sudo systemctl start devicon
+        sudo systemctl restart devicon
 
     - name: 🆖 Run Nginx
       run: |
