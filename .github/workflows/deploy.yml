@@ -29,6 +29,8 @@ jobs:
 
         cd /home/ubuntu/actions-runner/_work/devicons/devicons
 
+        pip install -r requirements.txt  
+
 
     - name: Install dependencies
       run: |
