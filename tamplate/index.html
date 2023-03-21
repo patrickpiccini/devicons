@@ -16,12 +16,12 @@
 <body onload="loadLabels()">
     <header>
         <div class="headerlinks">
-            <a href="mailto:patrickpiccini@hotmail.com" style="padding-right: 5px;" title="Email">
+            <a href="mailto:patrickpiccini@hotmail.com" style="padding-right: 5px;" title="Email" class="icons_header">
                 <img src="{{ url_for('static', filename='img/email.svg') }}" alt="email"></a>
-            <a href="https://github.com/PatrickPiccini" style="padding-right: 5px;" title="Github">
+            <a href="https://github.com/PatrickPiccini" style="padding-right: 5px;" title="Github" class="icons_header">
                 <img src="{{ url_for('static', filename='img/git.svg') }}" alt="github"></a>
             <a href="https://www.linkedin.com/in/patrick-berlatto-piccini-8414a91a7/" style="padding-right: 5px;"
-                title="Linkedin">
+                title="Linkedin" class="icons_header">
                 <img src="{{ url_for('static', filename='img/linkedin.svg') }}" alt="linkedin"></a>
         </div>
 
@@ -30,7 +30,6 @@
         <div class="div_icon">
             <img src="{{ url_for('static', filename='img/logo.svg') }}" style="display: flex;" alt="Dev Icon" />
             <h2 class="sbtitle">Your most powerful skills on GitHub</h2>
-            <h2 class="sbtitle">Ed lindo</h2>
             <hr style="color: #CDCDCD; margin: 20px; width: 90%;">
         </div>
 
@@ -75,12 +74,25 @@
                     </div>
                     <div id="colum_div_1">
                     </div>
+                    
                 </div>
+                <hr style="color: #CDCDCD; margin: 20px; width: 90%; align-self: center;">
+                <div class="div_central_doc">
+                    <div class="div_doc">
+                            <!-- <button class="doc_button" type="button" > -->
+                                <a href="" class="doc_button_link" >
+                                    <p class="doc_title">Get Stated</p>
+                                    <p class="doc_body">Click here to redirect to the documentation on how to add the icons to you GitHub!</p>
+                                </a>
+                            <!-- </button> -->
+                    </div>
+                </div>
+
             </div>
 
             <div class="informations">
                 <label class="label_text" for="tema">Exemple:</label>
-                <img src="{{ url_for('static', filename='img/exemple.png') }}" style="width: 100%; border-radius: 20px;"
+                <img src="{{ url_for('static', filename='img/exemple.png') }}" style="width: 100%; border-radius: 20px; margin-top: 10px;"
                     alt="">
             </div>
 

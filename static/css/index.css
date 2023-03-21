@@ -30,7 +30,6 @@ body{
 .div_bottom{
     flex-direction: column;
     display: flex;
-    margin-bottom: 50px;
 }
 
 .div_item{
@@ -44,6 +43,16 @@ body{
     display: flex;
     flex-wrap: wrap;
 
+}
+.div_doc{
+    max-width: 400px;
+    flex: 1;
+}
+.div_central_doc{
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 /* ---------------------------------- */
 
@@ -59,7 +68,7 @@ header {
     justify-content: flex-end;
 
 }
-a{
+.icons_header{
     justify-content: center;
     width: 40px;
     height: 20px;
@@ -86,7 +95,7 @@ form {
 
 }
 .label_text {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     font-size: 17px;
     font-weight: bold;
 }
@@ -137,8 +146,36 @@ form {
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 20px;
-
 }
+
+.doc_button_link{
+    flex-direction: column;
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #000000;
+    padding: 30px 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.doc_title{
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.doc_body{
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
 #link-gerado {
     font-size: 16px;
     text-align: center;
