@@ -1,7 +1,7 @@
-<p align="center"><img align="center" width="300" src="../devicons/static/img/logo.svg#gh-dark-mode-only"/></p>
-<p align="center"><img align="center" width="300" src="../devicons/static/img/logo-light.svg#gh-light-mode-only"/></p>
+<p align="center"><img align="center" width="320" src="./static/img/logo-light.svg#gh-dark-mode-only"/></p>
+<p align="center"><img align="center" width="320" src="./static/img/logo.svg#gh-light-mode-only"/></p>
 <h3 align="center">Your most powerful skills on GitHub 🚀</h3>
-
+<hr>
 
 # Summary
 
@@ -16,7 +16,7 @@
 
 # Example
 
-<img src="../devicons/static/img/exemple.png" >
+<img src="./static/img/exemple.png" >
 
 # Select Icons
 
