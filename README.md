@@ -3,29 +3,77 @@
 <h3 align="center">Your most powerful skills on GitHub 🚀</h3>
 <hr>
 
+### ADD ICONS: If you want to add an icon that does not exist in our database, please open an issue and our team will review the request to add
+
 # Summary
 
 - [Example](#example)
-- [Select Icons](#selectsicons)
-- [Themed Icons](#themed-icons)
-- [Size](#size-icons)
-- [Icons Per Line](#icons-per-line)
-- [Centering Icons](#centering-icons)
+- [Select Icons](#select-icons)
+- [How Use](#how-use)
+- [Examples](#examples)
 - [Icons List](#icons-list)
 
 
 # Example
 
-<img src="./static/img/exemple.png" >
+
+<p align="center"><img align="center" width="720" src="./static/img/exemple.png"/></p>
+
 
 # Select Icons
+<p align="center"><img align="center" width="820" src="https://user-images.githubusercontent.com/66441004/227280289-8f41d78f-5dc4-4474-bf48-5c5a22dfcebc.png"/></p>
 
-# Themed Icons
+- **Select you skills:** You need select the skills that you want generate icons
+- **Per Line:** Choose how many icons will be rendered per line. (Min: 1 Max: 30)
+- **Size:** Choose the size of icons. (default: 48)
+- **Theme:** Choose 'dark' or 'light' theme to render the icons. (default: dark)
 
-# Size Icons
+# How Use
+
+<p align="center"><img align="center" width="820" src="https://user-images.githubusercontent.com/66441004/227267823-1c6437d1-586d-461a-85f8-82b2f75ba92e.png"/></p>
+
+After choosing your icons, copy the generated link on the website and use this template below to paste in README.md, on your Github
+
+```md
+[![Skills](https://devicons.dev.br/icons?icon=Python,AWS,NodeJS,PostgreSQL,RabbitMQ&theme=dark)](https://devicons.dev.br/)
+```
+[![Skills](https://devicons.dev.br/icons?icon=Python,AWS,NodeJS,PostgreSQL,RabbitMQ&theme=dark)](https://devicons.dev.br/)
+
+# Examples
+- Light Theme:
+```md
+[![Skills](https://devicons.dev.br/icons?icon=Python,AWS,NodeJS,PostgreSQL,RabbitMQ,Powershell&theme=light)](https://devicons.dev.br/)
+```
+[![Skills](https://devicons.dev.br/icons?icon=Python,AWS,NodeJS,PostgreSQL,RabbitMQ,Powershell&theme=light)](https://devicons.dev.br/)
+---
+- Per Line:
+```md
+[![Skills](https://devicons.dev.br/icons?icon=Python,AWS,NodeJS,PostgreSQL,RabbitMQ,Powershell&theme=dark&perline=3)](https://devicons.dev.br/)
+```
+[![Skills](https://devicons.dev.br/icons?icon=Python,AWS,NodeJS,PostgreSQL,RabbitMQ,Powershell&theme=dark&perline=3)](https://devicons.dev.br/)
+---
+- Size:
+```md
+[![Skills](https://devicons.dev.br/icons?icon=Python,AWS,NodeJS&size=70&theme=dark)](https://devicons.dev.br/)
+```
+[![Skills](https://devicons.dev.br/icons?icon=Python,AWS,NodeJS&size=70&theme=dark)](https://devicons.dev.br/)
+---
+- Centering Icons:
+
+```html
+<p align="center">
+  <a href="https://devicons.dev.br/">
+    <img src="https://devicons.dev.br/icons?icon=Python,AWS,NodeJS&size=70" />
+  </a>
+</p>
+```
+<p align="center">
+  <a href="https://devicons.dev.br/">
+    <img src="https://devicons.dev.br/icons?icon=Python,AWS,NodeJS" />
+  </a>
+</p>
 
 # Icons List
-
 |      Icon ID       |                         Icon                          |      Icon ID       |                         Icon                          |      Icon ID       |                         Icon                          |      Icon ID       |                         Icon                          |
 | :----------------: | :---------------------------------------------------: | :----------------: | :---------------------------------------------------: | :----------------: | :---------------------------------------------------: | :----------------: | :---------------------------------------------------: |
 |     `ableton`      |    <img src="./icons/dark/Ableton.svg" width="48">    |   `activitypub`    |  <img src="./icons/dark/ActivityPub.svg" width="48">  |      `actix`       |     <img src="./icons/dark/Actix.svg" width="48">     |      `adonis`      |       <img src="./icons/dark/Adonis.svg" width="48">  |
