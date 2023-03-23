@@ -3,6 +3,8 @@ sudo apt update -y
 sudo apt install nginx -y
 sudo apt install python3-pip -y
 sudo apt install python3-venv  -y
+sudo apt install certbot -y
+sudo apt install python3-certbot-nginx -y
 alias python=python3 
 alias pip=pip3 
 
@@ -14,7 +16,6 @@ cd app/
 # cloning the repository
 git clone https://github.com/patrickpiccini/devicons.git
 # git clone -b hml https://github.com/patrickpiccini/devicons.git
-
 
 # running venv
 python -m venv venv
@@ -41,6 +42,8 @@ sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
 sudo systemctl enable nginx
 sudo systemctl start nginx
 
+# install certified SSL
+sudo certbot --nginx
 
 # sudo systemctl daemon-reload
 # sudo systemctl start devicon
