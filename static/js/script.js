@@ -1,6 +1,6 @@
 var host = 'localhost'
-var port = 80
-var hml = true
+var port = 5633
+var hml = false
 var icon_tags = new Object() // object with selected values
 var counter = 0 
 
@@ -63,7 +63,7 @@ function gerarLink() {
     if (hml == true){
         var url =  `http://${host}:${port}/icons?`
     } else {
-        var url =  `https://devicons.dev.br/icons?`
+        var url =  `https://www.devicons.dev.br/icons?`
     }
 
     if(icon_list != null && icon_list != []){
