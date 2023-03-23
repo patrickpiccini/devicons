@@ -1,5 +1,5 @@
 
-import json, math
+import json, math, logging
 
 class BuildSVG(object):
     def __init__(self, theme='', perline='', size=48) -> None:
@@ -17,10 +17,18 @@ class BuildSVG(object):
             json_object = json.load(openfile)
 
         for icon in icon_list:
-            try:
-                self.icon_list.append(json_object[icon])
-            except:
-                pass
+            if icon == 'all':
+                try:
+                    self.perline = 15
+                    for icons in json_object:
+                        self.icon_list.append(json_object[icons])
+                except:
+                    logging.error('message: Error to found ALL icons - status: 500')
+            else:
+                try:
+                    self.icon_list.append(json_object[icon])
+                except:
+                    logging.error('message: Error to found icons - status: 500')
 
     def build_svg(self) -> object:
 

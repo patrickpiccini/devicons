@@ -1,5 +1,5 @@
 var host = 'localhost'
-var port = 5633
+var port = 5563
 var hml = false
 var icon_tags = new Object() // object with selected values
 var counter = 0 
@@ -67,7 +67,6 @@ function gerarLink() {
     }
 
     if(icon_list != null && icon_list != []){
-        console.log(icon_list);
         url += "icon="+icon_list.toString()
     }
     if(size){
@@ -86,17 +85,18 @@ function gerarLink() {
         width_icon = icon_list.length*55.962
     }
 
-    $("#colum_div_1").empty()
-    $("#colum_div_1").append(`<label class="label_text" for="tema">Preview:</label>
-    <img id="preview" src="" style=width:${width_icon}px alt="">`)
-    
-    var linkGerado = document.getElementById("link-gerado");
-    var preview = document.getElementById("preview")
-    linkGerado.innerHTML = url
-    preview.setAttribute('src', url)
+    if(icon_list.length != 0){
+        $("#colum_div_1").empty()
+        $("#colum_div_1").append(`<label class="label_text" for="tema">Preview:</label>
+        <img id="preview" src="" style=width:${width_icon}px alt="">`)
+        
+        var linkGerado = document.getElementById("link-gerado");
+        var preview = document.getElementById("preview")
+        linkGerado.innerHTML = url
+        preview.setAttribute('src', url)
+    }
 }
 
-""
 function copy_textLink() {
     var text_link = document.getElementById("link-gerado").innerHTML;
     
