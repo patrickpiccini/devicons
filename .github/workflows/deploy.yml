@@ -51,9 +51,6 @@ jobs:
 
     - name: 🆖 Run Nginx
       run: |
-        # sudo mv /home/ubuntu/actions-runner/_work/devicons/devicons/conf/devicon /etc/nginx/sites-available
-        sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
-        sudo systemctl enable nginx
         sudo systemctl restart nginx
 
     
