@@ -39,8 +39,6 @@ jobs:
          sudo rm -rf /etc/nginx/sites-available/default
          sudo rm -rf /etc/nginx/sites-enabled/default
          sudo rm -rf /etc/systemd/system/devicon.service
-         sudo rm -rf /etc/nginx/sites-available/devicon
-         sudo rm -rf /etc/nginx/sites-enabled/devicon
 
     - name: 🐣Run DevIcon
       run: |
@@ -51,9 +49,6 @@ jobs:
 
     - name: 🆖 Run Nginx
       run: |
-        sudo mv /home/ubuntu/actions-runner/_work/devicons/devicons/conf/devicon /etc/nginx/sites-available
-        sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
-        sudo systemctl enable nginx
         sudo systemctl restart nginx
 
     

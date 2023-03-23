@@ -63,7 +63,7 @@ function gerarLink() {
     if (hml == true){
         var url =  `http://${host}:${port}/icons?`
     } else {
-        var url =  `https://www.devicons.dev.br/icons?`
+        var url =  `https://devicons.dev.br/icons?`
     }
 
     if(icon_list != null && icon_list != []){
