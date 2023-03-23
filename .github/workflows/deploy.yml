@@ -39,6 +39,8 @@ jobs:
          sudo rm -rf /etc/nginx/sites-available/default
          sudo rm -rf /etc/nginx/sites-enabled/default
          sudo rm -rf /etc/systemd/system/devicon.service
+         sudo rm -rf /etc/nginx/sites-available/devicon
+         sudo rm -rf /etc/nginx/sites-enabled/devicon
 
     - name: 🐣Run DevIcon
       run: |
