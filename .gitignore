@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 /auto-build.sh
-/manua-build.sh
+/manual-build.sh
 
 # C extensions
 *.so
