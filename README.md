@@ -25,7 +25,7 @@
 
 - **Select you skills:** You need select the skills that you want generate icons
 - **Per Line:** Choose how many icons will be rendered per line. (Min: 1 Max: 30)
-- **Size:** Choose the size of icons. (default: 48)
+- **Size:** Choose the size of icons. (default: 48px)
 - **Theme:** Choose 'dark' or 'light' theme to render the icons. (default: dark)
 
 # How Use
