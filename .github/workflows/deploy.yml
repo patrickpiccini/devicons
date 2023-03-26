@@ -6,8 +6,6 @@ name: 🚀Deploy DevIcon in EC2 hml
 on:
   push:
     branches: [ "main" ]
-  # pull_request:
-  #   branches: [ "main" ]
 
 jobs:
   build:
@@ -49,7 +47,10 @@ jobs:
 
     - name: 🆖 Run Nginx
       run: |
-        sudo systemctl restart nginx
+        sudo mv conf/devicon /etc/nginx/sites-available
+        sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
+        sudo systemctl enable nginx
+        sudo systemctl start nginx
 
     
             
