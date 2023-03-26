@@ -16,7 +16,6 @@
 
 # Example
 
-
 <p align="center"><img align="center" width="720" src="./static/img/exemple.png"/></p>
 
 
