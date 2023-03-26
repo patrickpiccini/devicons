@@ -49,7 +49,10 @@ jobs:
 
     - name: 🆖 Run Nginx
       run: |
-        sudo systemctl restart nginx
+        sudo mv conf/devicon /etc/nginx/sites-available
+        sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
+        sudo systemctl enable nginx
+        sudo systemctl start nginx
 
     
             
