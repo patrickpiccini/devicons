@@ -34,9 +34,10 @@ jobs:
     - name: 🗑️ Remove all config files
       run: |
         sudo systemctl stop nginx
-         sudo rm -rf /etc/nginx/sites-available/default
-         sudo rm -rf /etc/nginx/sites-enabled/default
-         sudo rm -rf /etc/systemd/system/devicon.service
+        sudo systemctl stop devicon
+        sudo rm -rf /etc/nginx/sites-available/default
+        sudo rm -rf /etc/nginx/sites-enabled/default
+        sudo rm -rf /etc/systemd/system/devicon.service
 
     - name: 🐣Run DevIcon
       run: |
@@ -47,9 +48,6 @@ jobs:
 
     - name: 🆖 Run Nginx
       run: |
-        sudo mv conf/devicon /etc/nginx/sites-available
-        sudo ln -s /etc/nginx/sites-available/devicon /etc/nginx/sites-enabled/
-        sudo systemctl enable nginx
         sudo systemctl start nginx
 
     
