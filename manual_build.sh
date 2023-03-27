@@ -45,20 +45,20 @@ sudo systemctl start nginx
 # install certified SSL
 sudo certbot --nginx
 
-# sudo systemctl daemon-reload
-# sudo systemctl start devicon
-# sudo systemctl enable devicon
-# sudo systemctl restart devicon
-# sudo systemctl status devicon
-# sudo systemctl stop devicon
+sudo systemctl daemon-reload
+sudo systemctl start devicon
+sudo systemctl enable devicon
+sudo systemctl restart devicon
+sudo systemctl status devicon
+sudo systemctl stop devicon
 
 
-# sudo systemctl start nginx
-# sudo systemctl enable nginx
-# sudo systemctl reload nginx
-# sudo systemctl status nginx
-# sudo systemctl stop nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl reload nginx
+sudo systemctl status nginx
+sudo systemctl stop nginx
 
 
-sudo tail -f /home/ubuntu/app/devicons/logs/devicon.error.log
-sudo tail -f /home/ubuntu/app/devicons/logs/devicon.access.log
+sudo tail -f /home/ubuntu/actions-runner/_work/devicons/devicons/logs/devicon.error.log
+sudo tail -f /home/ubuntu/actions-runner/_work/devicons/devicons/home/ubuntu/app/devicons/logs/devicon.access.log
