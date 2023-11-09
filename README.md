@@ -124,3 +124,4 @@ After choosing your icons, copy the generated link on the website and use this t
 |       `vue`        |     <img src="./icons/dark/VueJS.svg" width="48">     |       `wasm`       |    <img src="./icons/dark/WebAssembly.svg" width="48">|     `webflow`      |      <img src="./icons/dark/Webflow.svg" width="48">  |     `webpack`      |    <img src="./icons/dark/Webpack.svg" width="48">    |
 |     `windicss`     |   <img src="./icons/dark/WindiCSS.svg" width="48">    |    `wordpress`     |     <img src="./icons/dark/Wordpress.svg" width="48"> |     `workers`      |    <img src="./icons/dark/Workers.svg" width="48">    |        `xd`        |         <img src="./icons/dark/XD.svg" width="48">    |
 |       `zig`        |      <img src="./icons/dark/Zig.svg" width="48">      |
+
