@@ -14,6 +14,10 @@ mkdir app
 
 mkdir actions-runner && cd actions-runner
 
+# Check if there isn't any service running um port 8000
+# sudo lsof -i
+# kill than all
+
 # --- Git Actions
 
 # ---

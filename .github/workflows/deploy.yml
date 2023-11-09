@@ -50,6 +50,3 @@ jobs:
     - name: 🆖 Run Nginx
       run: |
           sudo systemctl restart nginx
-
-    
-            
