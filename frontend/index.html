@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/devicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="./js/script.js" defer></script>
+    <title>Dev Icon</title>
+</head>
+
+<body>
+    <header>
+        <div class="headerlinks">
+            <a href="mailto:patrickpiccini@hotmail.com" style="padding-right: 5px;" title="Email" class="icons_header">
+                <img src="./img/email.svg" alt="email"></a>
+            <a href="https://github.com/PatrickPiccini" style="padding-right: 5px;" title="Github" class="icons_header">
+                <img src="./img/git.svg" alt="github"></a>
+            <a href="https://www.linkedin.com/in/patrick-berlatto-piccini-8414a91a7/" style="padding-right: 5px;"
+                title="Linkedin" class="icons_header">
+                <img src="./img/linkedin.svg" alt="linkedin"></a>
+        </div>
+    </header>
+
+    <form>
+        <div class="div_icon">
+            <img src="./img/logo.svg" style="display: flex;" alt="Dev Icon" />
+            <h2 class="sbtitle">Your most powerful skills on GitHub</h2>
+            <hr style="color: #CDCDCD; margin: 20px; width: 90%;">
+        </div>
+
+        <div class="div_top">
+            <div class="div_top">
+                <label class="label_text" for="icon">Select your skills</label>
+                <select id="select_icon" name="icon" onchange="attualizeLabels()">
+                    <!-- Options will be loaded here -->
+                </select>
+                <div id="div_tags">
+                    <!-- Tags will be added here -->
+                </div>
+            </div>
+
+            <div class="div_central">
+                <div class="div_item">
+                    <label class="label_text" for="numero1">Per Line</label>
+                    <input class="numbers" id="perline" type="number" name="per line" min="1" max="30">
+                </div>
+                <div class="div_item" style="margin-inline: 15px;">
+                    <label class="label_text" for="numero2">Size:</label>
+                    <input class="numbers" id="size" type="number" name="size" min="48" max="1920">
+                </div>
+                <div class="div_item">
+                    <label class="label_text" for="numero2">Theme:</label>
+                    <select class="theme" id="theme" name="Theme">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="div_bottom">
+                <button class="generate_button" type="button" onclick="gerarLink()">Generate Link</button>
+
+                <div class="div_item">
+                    <label class="label_text" for="tema">Copy link:</label>
+                    <div class="row_div_1">
+                        <span id="link_gerado"></span>
+                        <button type="button" onclick="copy_textLink()" class="copy_button">Copy</button>
+                    </div>
+                    <div id="colum_div_1"></div>
+                </div>
+
+                <hr style="color: #CDCDCD; margin: 20px; width: 90%; align-self: center;">
+                <div class="div_central_doc">
+                    <div class="div_doc">
+                        <a href="https://github.com/patrickpiccini/devicons#readme" class="doc_button_link">
+                            <p class="doc_title">Get Started</p>
+                            <p class="doc_body">Click here to redirect to the documentation on how to add the icons to
+                                your GitHub!</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="informations">
+                <label class="label_text" for="tema">Example:</label>
+                <img src="./img/exemple.png" style="width: 100%; border-radius: 20px; margin-top: 10px;" alt="example">
+                <br><br>
+
+                <label class="label_text">All Icons:</label>
+                <img src="https://api.devicons.dev.br/icon?icons=all&theme=dark" style="width: 100%; margin-top: 10px;"
+                    alt="all icons">
+            </div>
+        </div>
+    </form>
+
+    <footer></footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const selector = document.getElementById("select_icon");
+            const fragment = document.createDocumentFragment();
+
+            const text = ["AWS", "Ableton", "ActivityPub", "Actix", "Adonis", "AfterEffects", "AiScript", "AlpineJS", 
+            "Anaconda", "AndroidStudio", "Angular", "Ansible", "Apollo", "Apple", "Appwrite", "Arch", 
+            "Arduino", "Astro", "Atom", "Audition", "AutoCAD", "Azul", "Azure", "BSD", 
+            "Babel", "Bash", "Bevy", "BitBucket", "Blender", "Bootstrap", "Bun", "C", 
+            "CLion", "CMake", "CPP", "CS", "CSS", "Cassandra", "Clojure", "Cloudflare", 
+            "CodePen", "CoffeeScript", "Crystal", "Cypress", "D3", "DENO", "Dart", "Debian", 
+            "DevTo", "Discord", "DiscordBots", "DiscordJS", "Django", "Docker", "DotNet", "DynamoDB", 
+            "Eclipse", "Elasticsearch", "Electron", "Elixir", "Elysia", "Emacs", "Ember", "Emotion", 
+            "ExpressJS", "FastAPI", "Fediverse", "Figma", "Firebase", "Flask", "Flutter", "Forth", 
+            "Fortran", "GCP", "GTK", "GameMakerStudio", "Gatsby", "Gherkin", "Git", "GitLab", 
+            "Github", "GithubActions", "Gmail", "GoLang", "Godot", "Gradle", "Grafana", "GraphQL", 
+            "Gulp", "HTML", "Haskell", "Haxe", "HaxeFlixel", "Heroku", "Hibernate", "Htmx", 
+            "IPFS", "Idea", "Illustrator", "Instagram", "JQuery", "Java", "JavaScript", "Jenkins", 
+            "Jest", "Julia", "Kafka", "Kali", "Kotlin", "Ktor", "Kubernetes", "LaTeX", 
+            "Laravel", "Less", "LinkedIn", "Linux", "Lit", "Lua", "Markdown", "Mastodon", 
+            "MaterialUI", "Matlab", "Maven", "Mint", "Misskey", "MongoDB", "MySQL", "NeoVim", 
+            "NestJS", "Netlify", "NextJS", "Nginx", "Nim", "Nix", "NodeJS", "Notion", 
+            "Npm", "NuxtJS", "OCaml", "Obsidian", "Octave", "OpenCV", "OpenShift", "OpenStack", 
+            "PHP", "Perl", "Photoshop", "PhpStorm", "Pinia", "Pkl", "Plan9", "PlanetScale", 
+            "Pnpm", "PostgreSQL", "Postman", "Powershell", "Premiere", "Prisma", "Processing", "Prometheus", 
+            "Pug", "PyCharm", "PyTorch", "Python", "QT", "R", "ROS", "RabbitMQ", 
+            "Rails", "RaspberryPi", "React", "ReactiveX", "RedHat", "Redis", "Redux", "Regex", 
+            "Remix", "Replit", "Rider", "RobloxStudio", "Rocket", "RollupJS", "Ruby", "Rust", 
+            "SQLite", "SVG", "Sass", "Scala", "SciKitLearn", "ScikitLearn", "Selenium", "Sentry", 
+            "Sequelize", "Sketchup", "SolidJS", "Solidity", "Spring", "StackOverflow", "StyledComponents", "Sublime", 
+            "Supabase", "Svelte", "Swift", "Symfony", "TailwindCSS", "Tauri", "TensorFlow", "Terraform", 
+            "ThreeJS", "Twitter", "TypeScript", "Ubuntu", "Unity", "UnrealEngine", "V", "VIM", 
+            "VSCode", "VSCodium", "Vala", "Vercel", "VisualStudio", "Vite", "Vitest", "VueJS", 
+            "Vuetify", "WebAssembly", "WebStorm", "Webflow", "Webpack", "WindiCSS", "Windows", "Wordpress", 
+            "Workers", "XD", "Yarn", "Yew", "Zig", "p5js"
+            ];
+
+            text.forEach(icon => {
+                const option = document.createElement("option");
+                option.textContent = icon;
+                option.value = icon;
+                fragment.appendChild(option);
+            });
+
+            selector.appendChild(fragment);
+        });
+    </script>
+</body>
+
+</html>
