@@ -28,9 +28,9 @@ def load_select_options() -> None:
     unique_names = set()
 
     for key in data.keys():
-        if key.endswith("-dark"):
+        if key.endswith("-Dark"):
             base_name = key[:-5]
-        elif key.endswith("-light"):
+        elif key.endswith("-Light"):
             base_name = key[:-6]
         else:
             base_name = key
@@ -56,6 +56,9 @@ def build_markdown_table():
     line = '|'
     for icon_id, path in data.items():
         if '-light' not in icon_id:
+            if icon_id.endswith("-dark"):
+                icon_id = icon_id.replace('-dark', '')
+
             line_count += 1
             if line_count <=2:
                 line += f' `{icon_id}` | <img src="{path}" width="48"> |'
@@ -70,6 +73,6 @@ def build_markdown_table():
         f.write(markdown_table)
 
 if __name__ == '__main__':
+    build_json()
+    load_select_options()
     build_markdown_table()
-    # build_json()
-    # load_select_options()
