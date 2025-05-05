@@ -13,7 +13,7 @@ class BuildSVG(object):
         icon_list = [icons[i].lower() for i in range(len(icons))]
 
         # Opening JSON file
-        with open(f'./data/labels.json', 'r') as openfile:
+        with open(f'./lambda/data/labels.json', 'r') as openfile:
             # Reading from json file
             json_object = json.load(openfile)
 
@@ -76,8 +76,8 @@ class BuildSVG(object):
         return svg_output  # Sem o escape do \"
     
 if __name__ == '__main__':
-        icons = 'C,Python,Java,AWS'
-        # icons = 'all'
+        # icons = 'C,Python,Java,AWS'
+        icons = 'all'
         icons = icons.split(',')
         BSVG = BuildSVG('dark', 30, 48)
         BSVG.build_icons(icons)
